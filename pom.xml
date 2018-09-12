@@ -8,15 +8,15 @@
 
     <!-- project coordinates - values which uniquely identify this project -->
 
-  <groupId>edu.ucsb.cs56.pconrad</groupId>
-  <artifactId>sparkjava-demo-01</artifactId>
+  <groupId>edu.ucsb.cs56.GauchoGains</groupId>
+  <artifactId>mongo-gains</artifactId>
   <version>1.0</version>
   <url>https://ucsb-cs56-pconrad.github.io/sparkjava-01</url>
   
   <!-- configure what mvn package produces -->
   
   <packaging>jar</packaging>
-  <name>sparkjava-demo-01</name>
+  <name>mongo-gains</name>
   
   <!-- what version of Java should we use and what encoding for files? -->
   <properties>
@@ -24,14 +24,23 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
 
-    <userDefMain>edu.ucsb.cs56.pconrad.MongoDBDemo01</userDefMain>
-    <userDefHerokuApp>ucsb-cs56-pconrad-08-28-18</userDefHerokuApp>
+    <userDefMain>edu.ucsb.cs56.GauchoGains.MongoGains</userDefMain>
+    <userDefHerokuApp>cs-56-mawga-mongogains</userDefHerokuApp>
     
   </properties>
 
   <!-- what other software does our project depend on (third-party JARs, etc.) -->
   <dependencies>
-
+	  <dependency>
+		  <groupId>com.sparkjava</groupId>
+		  <artifactId>spark-template-mustache</artifactId>
+		  <version>2.7.1</version>
+	  </dependency>
+	  <dependency>
+		  <groupId>org.slf4j</groupId>
+		  <artifactId>slf4j-api</artifactId>
+		  <version>1.7.5</version>
+	  </dependency>
     <!-- JUnit unit testing (https://junit.org/) -->    
     <dependency>
       <groupId>junit</groupId>
@@ -135,7 +144,7 @@
       <plugin>
 	<groupId>com.heroku.sdk</groupId>
 	<artifactId>heroku-maven-plugin</artifactId>
-	<version>2.0.3</version>
+	<version>0.4.4</version>
 	<configuration>
           <jdkVersion>1.8</jdkVersion>
           <!-- Use your own application name -->
@@ -144,7 +153,7 @@
           <processTypes>
             <!-- Tell Heroku how to launch your application -->
             <!-- You might have to remove the ./ in front   -->
-            <web>java $JAVA_OPTS -jar target/sparkjava-demo-01-1.0-jar-with-dependencies.jar</web>
+	    <web>java -jar target/mongo-gains-1.0-jar-with-dependencies.jar</web>
 
           </processTypes>
 	</configuration>
