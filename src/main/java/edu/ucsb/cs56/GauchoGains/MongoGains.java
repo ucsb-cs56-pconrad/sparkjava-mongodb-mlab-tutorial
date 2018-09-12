@@ -1,4 +1,4 @@
-package edu.ucsb.cs56.pconrad;
+package edu.ucsb.cs56.GauchoGains;
 
 /*
  * Some portions:
@@ -37,13 +37,14 @@ import com.mongodb.client.result.UpdateResult;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.ucsb.cs56.GauchoGains.User;
 
 /**
  * Hello world!
  *
  */
 
-public class MongoDBDemo01 {
+public class MongoGains {
 
   /**
        return a HashMap with values of all the environment variables
