@@ -2,7 +2,7 @@
 
 Credit: The [original version of this tutorial](https://github.com/Figler/ucsb-cs56-mongodb-mlab-tut) is by [Chandler Forrest](https://github.com/figler), from Summer 2018).
 
-#Usage
+# Usage
 Edit pom.xml as necessary for correct heroku deployment.
 Create .env to
 ```
@@ -13,7 +13,7 @@ MONGODB_HOST=dbhosturl
 MONGODB_PORT=dbport
 ```
 
-#Todo
+# Todo
 Implement current code in firebasegains repo to interact correctly with MongoDB
 
 # References
